@@ -14,7 +14,7 @@ const Weather = () => {
 
   const fetchData = async () => {
     const response = await axios.get(
-      `http://api.weatherapi.com/v1/current.json?key=e585ce03c59245f7b3d165133211908&q=${query}&aqi=no`
+      `https://api.weatherapi.com/v1/current.json?key=e585ce03c59245f7b3d165133211908&q=${query}&aqi=no`
     );
     setInfo(response.data.location);
     setWeatherData(response.data.current);
@@ -88,14 +88,6 @@ const Weather = () => {
             <div>
               <h3>Condition</h3>
               <h2>{weatherData.condition?.text}</h2>
-            </div>
-          </div>
-          <div className="boxes">
-            <img src={visi} alt="" />
-            <div>
-              <h3>Humidity</h3>
-              <h2>79</h2>
-              <h4>%</h4>
             </div>
           </div>
         </InfoBox>
